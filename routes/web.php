@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index')->name('index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/posthome', 'PostController@index')->name('home');
+Route::resource('posts', 'PostController');
+Route::resource('users', 'UserHandleController');
+Route::resource('permissions', 'PermissionController');
+Route::resource('roles', 'RoleController');
