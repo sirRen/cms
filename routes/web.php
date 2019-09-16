@@ -21,3 +21,11 @@ Route::resource('posts', 'PostController');
 Route::resource('users', 'UserHandleController');
 Route::resource('permissions', 'PermissionController');
 Route::resource('roles', 'RoleController');
+
+Route::namespace('Admin')->prefix('admin')->group(function () {
+
+    Route::get('/', 'IndexController@index')->name("main");
+    Route::get('/minor', 'IndexController@minor')->name("minor");
+
+    // 在 「App\Http\Controllers\Admin」 命名空间下的控制器
+});

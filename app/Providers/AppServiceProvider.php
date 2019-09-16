@@ -24,5 +24,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        //注册全局函数
+        require_once __DIR__ . '/../Http/Helpers/Navigation.php';
     }
 }
