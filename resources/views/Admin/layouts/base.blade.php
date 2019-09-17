@@ -16,22 +16,21 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        @include('Admin.layouts.navigation')
+{{--        @include('Admin.layouts.navigation')--}}
 
         <!-- Page wraper -->
-        <div id="page-wrapper" class="gray-bg">
+{{--        <div id="page-wrapper" class="gray-bg">--}}
 
             <!-- Page wrapper -->
-            @include('Admin.layouts.topnavbar')
+{{--            @include('Admin.layouts.topnavbar')--}}
 
             <!-- Main view  -->
-            <iframe name="main" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
-{{--            @yield('content')--}}
+            @yield('content')
 
             <!-- Footer -->
-            @include('Admin.layouts.footer')
+{{--            @include('Admin.layouts.footer')--}}
 
-        </div>
+{{--        </div>--}}
         <!-- End page wrapper-->
 
     </div>
