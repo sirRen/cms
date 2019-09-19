@@ -27,7 +27,7 @@
             <!-- Main view  -->
             <div>
 
-            <iframe name="main" id="main" src="/admin/minor" width="100%" height="100%" frameborder="no"  marginwidth="0" marginheight="0" scrolling="yes"></iframe>
+            <iframe name="main" id="main" src="/admin/minor" width="100%" height="100%" frameborder="no"  marginwidth="0" marginheight="0" scrolling="no"></iframe>
 {{--            @yield('content')--}}
             </div>
 
