@@ -25,8 +25,11 @@
             @include('Admin.layouts.topnavbar')
 
             <!-- Main view  -->
-            <iframe name="main" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
+            <div>
+
+            <iframe name="main" id="main" src="/admin/minor" width="100%" height="100%" frameborder="no"  marginwidth="0" marginheight="0" scrolling="yes"></iframe>
 {{--            @yield('content')--}}
+            </div>
 
             <!-- Footer -->
             @include('Admin.layouts.footer')
@@ -41,6 +44,30 @@
 
 @section('scripts')
 @show
+<script>
+    var timeIframe;
+    window.onload = function() {
+        timeIframe = setTimeout(GetIframeStatus, 10);
+    }
+    function GetIframeStatus() {
+        var iframe = document.getElementById("main");
+        var iframeWindow = iframe.contentWindow;
+        //内容是否加载完
+        if (iframeWindow.document.readyState == "complete") {
+            var iframeWidth, iframeHeight;
+            //获取Iframe的内容实际宽度
+            iframeWidth = iframeWindow.document.documentElement.scrollWidth;
+            //获取Iframe的内容实际高度
+            iframeHeight = iframeWindow.document.documentElement.scrollHeight;
+            //设置Iframe的宽度
+            iframe.width = iframeWidth;
+            //设置Iframe的高度
+            iframe.height = iframeHeight;
+        } else {
+            timeIframe = setTimeout(GetIframeStatus, 10);
+        }
+    }
 
+</script>
 </body>
 </html>

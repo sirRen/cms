@@ -10,10 +10,9 @@
     <link rel="stylesheet" href="{!! asset('css/app.css') !!}" />
 
 </head>
-<body>
+<body class="gray-bg">
 
   <!-- Wrapper-->
-    <div id="wrapper">
 
         <!-- Navigation -->
 {{--        @include('Admin.layouts.navigation')--}}
@@ -33,10 +32,9 @@
 {{--        </div>--}}
         <!-- End page wrapper-->
 
-    </div>
     <!-- End wrapper-->
 
-<script src="{!! asset('js/app.js') !!}" type="text/javascript"></script>
+{{--<script src="{!! asset('js/app.js') !!}" type="text/javascript"></script>--}}
 
 @section('scripts')
 @show

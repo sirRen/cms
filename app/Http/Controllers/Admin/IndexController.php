@@ -18,5 +18,10 @@ class IndexController extends Controller
     {
         return view('Admin/home/minor');
     }
+    public function index2()
+    {
+        return view('Admin/home/index2');
+    }
+
 
 }
