@@ -67,6 +67,13 @@
             timeIframe = setTimeout(GetIframeStatus, 10);
         }
     }
+    //添加选中事件
+    $(document).ready(function () {
+        $("#side-menu  [target='main']").parent().click(function () {
+            $("#side-menu  [target='main']").parent().removeClass('active');
+            $(this).addClass('active');
+        })
+    });
 
 </script>
 </body>
