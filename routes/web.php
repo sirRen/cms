@@ -25,7 +25,10 @@ Route::resource('roles', 'RoleController');
 Route::namespace('Admin')->prefix('admin')->group(function () {
 
     Route::get('/', 'IndexController@index')->name("main");
+    Route::get('/default', 'IndexController@default')->name("main");
     Route::get('/minor', 'IndexController@minor')->name("minor");
+    Route::get('/index1', 'IndexController@index1')->name("minor");
+    Route::get('/index2', 'IndexController@index2')->name("minor");
 
     // 在 「App\Http\Controllers\Admin」 命名空间下的控制器
 });

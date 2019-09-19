@@ -11,6 +11,11 @@ class IndexController extends Controller
 {
     public function index()
     {
+        return view('Admin/layouts/app');
+    }
+
+    public function default()
+    {
         return view('Admin/home/index');
     }
 
@@ -22,6 +27,9 @@ class IndexController extends Controller
     {
         return view('Admin/home/index2');
     }
-
+    public function index1()
+    {
+        return view('Admin/home/index1');
+    }
 
 }

@@ -19,10 +19,16 @@
                 </div>
             </li>
             <li class="{{ isActiveRoute('main') }}">
-                <a href="{{ url('/admin/') }}" target="main"><i class="fa fa-th-large"></i> <span class="nav-label">Main view</span></a>
+                <a href="{{ url('/admin/default') }}" target="main" ><i class="fa fa-th-large"></i> <span class="nav-label">Main view</span></a>
             </li>
             <li class="{{ isActiveRoute('minor') }}">
                 <a href="{{ url('/admin/minor') }}" target="main"><i class="fa fa-th-large"></i> <span class="nav-label">Minor view</span> </a>
+            </li>
+            <li class="{{ isActiveRoute('main') }}">
+                <a href="{{ url('/admin/index1') }}" target="main"><i class="fa fa-th-large"></i> <span class="nav-label">Main view</span></a>
+            </li>
+            <li class="{{ isActiveRoute('minor') }}">
+                <a href="{{ url('/admin/index2') }}" target="main"><i class="fa fa-th-large"></i> <span class="nav-label">Minor view</span> </a>
             </li>
         </ul>
 
